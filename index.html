@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<title>Isorei</title>
 	</head>
-	<body>
+	<body class="bg-dark">
 		<nav class="navbar navbar-expand navbar-dark bg-primary p-0">
 			<div>
 				<a href="#" class="navbar-brand p-0">
@@ -25,16 +25,16 @@
 			</div>
 			<ul class="navbar-nav w-50 mx-auto justify-content-around">
 				<li class="nav-item">
-					<a class="nav-link btn-sm" href="#">Rules</a>
+					<a class="nav-link btn-sm" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn-sm" href="#">Map</a>
+					<a class="nav-link btn-sm" href="rules.html">Rules</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn-sm" href="#">Journal</a>
+					<a class="nav-link btn-sm" href="journal.html">Journal</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn-sm" href="">Home</a>
+					<a class="nav-link btn-sm" href="map.html">Map</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a
@@ -46,19 +46,52 @@
 						>Quizzes</a
 					>
 					<div class="dropdown-menu">
-						<a href="#" class="dropdown-item">Subclass Quiz</a
-						><a href="#" class="dropdown-item">Race Quiz</a>
+						<a href="subclass.html" class="dropdown-item">Subclass Quiz</a
+						><a href="race.html" class="dropdown-item">Race Quiz</a>
 					</div>
 				</li>
 			</ul>
 		</nav>
-		<main class="bg-dark w-100 h-100">
-			<div class="container">
-				<div class="container setting">fwefawefawefawf</div>
-				<div class="container gods">awefawefaefwef</div>
+		<main class="bg-dark">
+			<div class="container-fluid pt-5">
+				<div class="row">
+					<div class="col-3 m-auto text-center align-self-center">
+						<img class="w-75" src="./images/Group 22 (1).png" alt="" />
+					</div>
+					<div class="col-6">
+						<div class="setting text-light" id="setting">
+							<h2 class="h2-responsive">Setting</h2>
+							<p class="lead">
+								Isorei is the name given by the gods to the prime material plane, where most of your
+								adventures will take place. Isorei was created about 900 years ago, along with a
+								wide majority of its denizens. Up until the start of this adventure, races have
+								lived in relative isolation, unaware of what lies beyond their borders. The world is
+								primal, with small spots of civilization across the world. The driving force behind
+								the world are the 13 gods. At the moment, all forms of non-innate magic are divine,
+								which means the gods are a big part of people’s lives.
+							</p>
+						</div>
+						<div class="gods text-light pt-3" id="gods">
+							<h2 class="h2-responsive">Gods</h2>
+							<p class="lead">
+								There are thirteen gods in this world, each representing a different aspect. Each
+								god
+							</p>
+						</div>
+						<div class="about text-light">
+							<p class="">
+								This is a website dedicated to my D&D campaign. If you want to give me money for no
+								reason, feel free to contact me at 206-735-0315
+							</p>
+						</div>
+					</div>
+					<div class="col-3 text-center align-self-center">
+						<img class="w-50" src="./images/d20-icon-15.png" alt="" />
+					</div>
+				</div>
 			</div>
 		</main>
-
+		<footer class="bg-dark">This is the footer</footer>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>

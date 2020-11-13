@@ -9610,6 +9610,10 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   transform: rotate(180deg);
 }
 
+body {
+  height: 100vh;
+}
+
 .navbar-nav {
   padding-right: 144px;
 }
@@ -9623,4 +9627,13 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   text-align: center;
   font-size: 1rem;
   width: 100%;
+}
+
+.list-group {
+  background-color: #616161;
+  padding-left: 40px;
+}
+
+.list-group a:link, .list-group a:visited {
+  line-height: 1.8em;
 }
