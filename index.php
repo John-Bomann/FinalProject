@@ -16,42 +16,7 @@
 		<title>Isorei</title>
 	</head>
 	<body class="bg-dark">
-		<nav class="navbar navbar-expand navbar-dark bg-primary p-0">
-			<div>
-				<a href="#" class="navbar-brand p-0">
-					<img src="/images/IsoreiGods.png" width="auto" height="60" alt="" />
-				</a>
-				<a href="#" class="navbar-brand text-center">Isorei</a>
-			</div>
-			<ul class="navbar-nav w-50 mx-auto justify-content-around">
-				<li class="nav-item">
-					<a class="nav-link btn-sm" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link btn-sm" href="rules.html">Rules</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link btn-sm" href="journal.html">Journal</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link btn-sm" href="map.html">Map</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a
-						class="nav-link btn-sm dropdown-toggle"
-						href="#"
-						id="navbarDropdown"
-						role="button"
-						data-toggle="dropdown"
-						>Quizzes</a
-					>
-					<div class="dropdown-menu">
-						<a href="subclass.html" class="dropdown-item">Subclass Quiz</a
-						><a href="race.html" class="dropdown-item">Race Quiz</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
+		<?php include('include/nav.php') ?>
 		<main class="bg-dark">
 			<div class="container-fluid pt-5">
 				<div class="row">
@@ -59,6 +24,13 @@
 						<img class="w-75" src="./images/Group 22 (1).png" alt="" />
 					</div>
 					<div class="col-6">
+					<div class="setting text-light" id="about">
+							<h2 class="h2-responsive">About</h2>
+							<p class="lead">
+								This website is dedicated to my D&D game hosted on Roll20. On here are some
+								rules and tools for the campaign, and some quizzes to see what subclass you are.
+							</p>
+						</div>
 						<div class="setting text-light" id="setting">
 							<h2 class="h2-responsive">Setting</h2>
 							<p class="lead">
@@ -91,7 +63,7 @@
 				</div>
 			</div>
 		</main>
-		<footer class="bg-dark">This is the footer</footer>
+		<?php include('include/footer.php') ?>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
