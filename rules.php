@@ -18,8 +18,8 @@
 	<body class="bg-dark">
 		<?php include('include/nav.php') ?>
 		<main class="bg-dark text-light">
-			<h1 class="h1-responsive text-center mt-4">Rules</h1>
-			<div class="container bg-dark my-4 py-3" id="table-rules">
+			<h1 class="h1-responsive text-center mt-4 mb-3">Rules</h1>
+			<div class="container bg-dark mb-4 py-3" id="table-rules">
 				<h2 class="h2-responsive">Table Rules</h2>
 				<ul class="list-group text-light py-2 pr-4">
 					<li class="lead">

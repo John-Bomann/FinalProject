@@ -32,15 +32,20 @@
 		</div>
 		<main class="bg-dark text-light mb-3">
 			<div id="quizQuestions">
-				<h2 class="card-header bg-secondary text-center mb-3 text-dark">What Subclass Are You?</h5>
+				<h1 class="card-header text-center mt-3 mb-3">What Subclass Are You?</h1>
 				<div class="container d-flex flex-column w-50" id="quiz">
 				</div>
 				<div class="container">
 					<button class="btn btn-primary btn-block w-50 my-2" id="submit">Submit Quiz</button>
 				</div>
+				<h2 class="text-center" id="warning"></h2>
 			</div>
-			<div class="results d-none" id="results">
-				<h2 class="text-center mt-3"></h2>
+			<div class="results d-none align-items-center flex-column mt-4" id="results">
+				<h1 class="text-center my-2" id="className"></h1>
+				<h1 class="text-center my-2" id="subclassName"></h1>
+				<a href="subclass.php" class="btn btn-lg btn-primary my-4">
+					Take it again
+			</a>
 			</div>
 		</main>
 		<?php include('include/footer.php') ?>

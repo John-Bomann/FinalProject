@@ -24,18 +24,18 @@
 						<img class="w-75" src="./images/Group 22 (1).png" alt="" />
 					</div>
 					<div class="col-6">
-					<div class="setting text-light" id="about">
-							<h2 class="h2-responsive">About</h2>
-							<p class="lead">
-								This website is dedicated to my D&D game hosted on Roll20. On here are some
-								rules and tools for the campaign, and some quizzes to see what subclass you are.
-							</p>
-						</div>
-						<div class="setting text-light" id="setting">
+					<div class="setting text-light mb-4" id="about">
+						<h2 class="h2-responsive">About</h2>
+						<p class="lead">
+							This website is dedicated to my D&D game hosted on Roll20. On here are some
+							rules and tools for the campaign, and some quizzes to see what subclass you are.
+						</p>
+					</div>
+						<div class="setting text-light mb-4" id="setting">
 							<h2 class="h2-responsive">Setting</h2>
 							<p class="lead">
 								Isorei is the name given by the gods to the prime material plane, where most of your
-								adventures will take place. Isorei was created about 900 years ago, along with a
+								adventures will take place. Isorei was formed about 900 years ago, along with a
 								wide majority of its denizens. Up until the start of this adventure, races have
 								lived in relative isolation, unaware of what lies beyond their borders. The world is
 								primal, with small spots of civilization across the world. The driving force behind
@@ -46,14 +46,7 @@
 						<div class="gods text-light pt-3" id="gods">
 							<h2 class="h2-responsive">Gods</h2>
 							<p class="lead">
-								There are thirteen gods in this world, each representing a different aspect. Each
-								god
-							</p>
-						</div>
-						<div class="about text-light">
-							<p class="">
-								This is a website dedicated to my D&D campaign. If you want to give me money for no
-								reason, feel free to contact me at 206-735-0315
+								There are thirteen gods in this world, each representing a different aspect, as shown by the diagram on the left. Each god also has a counterpart, a god who represents the opposite of another. For example, honor and trickery are opposites. Each god gives different benefits to their followers. 
 							</p>
 						</div>
 					</div>

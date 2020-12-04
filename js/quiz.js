@@ -2,6 +2,7 @@ const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 const dataTarget = document.getElementById("data");
+const warning = document.getElementById("warning");
 const subclassData = JSON.parse(dataTarget.textContent);
 const quizQuestions = [
 	{
@@ -76,11 +77,9 @@ function showResults() {
 	});
 
 	if (incomplete) {
-		resultsContainer.querySelector("h2").textContent =
-			"*You need to answer all questions, try again.";
-		resultsContainer.classList.remove("d-none");
-		resultsContainer.classList.add("text-danger");
-		resultsContainer.scrollIntoView({ behavior: "smooth" });
+		warning.textContent = "*You need to answer all questions, try again.";
+		warning.classList.add("text-danger");
+		warning.scrollIntoView({ behavior: "smooth" });
 	} else {
 		handleSuccess(answers);
 	}
@@ -88,30 +87,38 @@ function showResults() {
 
 function handleSuccess(answers) {
 	$("#quizQuestions").fadeOut();
+	warning.classList.add("d-none");
+	resultsContainer.classList.remove("d-none");
+	resultsContainer.classList.add("d-flex");
 	matchCheck(answers);
 }
 
 function matchCheck(answers) {
 	console.log(answers);
-	let bestMatch = { highCount: 0, matches: [] };
+	let bestMatch = { highCount: 0, class: [], subclass: [] };
 
-	// Checking for matches, and applying new parameters if no matches
+	// Checking for subclass, and applying new parameters if no subclass
 	subclassData.forEach((subclass) => {
 		let count = 0;
 		if (subclass.damage == answers[0]) {
 			count += 1.1;
 		}
+
 		if (subclass.devotion == answers[1]) {
 			count++;
 		}
+
 		if (subclass.death == answers[2]) {
 			count++;
+			answers[2] === 4 ? (count += 0.5) : null;
 		} else if (
-			(answers[2] === 5 && subclass.class === "Warlock") ||
-			subclass.class === "Cleric" ||
-			subclass.class === "Wizard"
+			answers[2] == 5 &&
+			(subclass.class === "Warlock" ||
+				subclass.class === "Cleric" ||
+				subclass.class === "Wizard" ||
+				subclass.name == "Spores")
 		) {
-			count++;
+			count += 3;
 		}
 
 		if (subclass.purpose == answers[3]) {
@@ -119,25 +126,37 @@ function matchCheck(answers) {
 		}
 		if (subclass.time == answers[4]) {
 			count += 0.2;
-			if (answers[4] === 4) {
+			if (answers[4] == 4) {
 				count += 0.9;
 			}
 		}
 		if (subclass.mindset == answers[5]) {
 			count++;
 		} else {
-			subclass.mindset - answers[5] === 1 ? (count += 0.8) : null;
+			subclass.mindset - answers[5] == 1 ? (count += 0.8) : null;
 		}
 		if (count > bestMatch.highCount) {
 			bestMatch.highCount = count;
-			bestMatch.matches = [subclass.name];
+			bestMatch.subclass = [subclass.name];
+			bestMatch.class = [subclass.class];
 		} else if (count === bestMatch.highCount) {
-			bestMatch.matches.push(subclass.name);
+			bestMatch.subclass.push(subclass.name);
+			bestMatch.class.push(subclass.class);
 		}
 	});
-	console.log(`Match found with: ${bestMatch.highCount} matches` + bestMatch.matches);
+	if (bestMatch.subclass.length > 1) {
+		randSubclass = Math.floor(Math.random() * (bestMatch.subclass.length - 1));
+		bestMatch.subclass = bestMatch.subclass[randSubclass];
+		bestMatch.class = bestMatch.class[randSubclass];
+	}
+	resultsContainer.querySelector("#className").textContent = `Your class is: ${bestMatch.class}`;
+	resultsContainer.querySelector(
+		"#subclassName"
+	).textContent = `Your class is: ${bestMatch.subclass}`;
+	console.log(`Match found with: ${bestMatch.highCount} subclass` + bestMatch.subclass);
 }
 
 buildQuiz();
 
 submitButton.addEventListener("click", showResults);
+submitButton.addEventListener("click");

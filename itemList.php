@@ -17,7 +17,33 @@
 	</head>
 	<body class="bg-dark">
 		<?php include('include/nav.php') ?>
-		<main class="bg-dark"></main>
+		<main class="bg-dark text-light">
+			<h1 class="h1-responsive text-center mt-4 mb-3">Magic Item List</h1>
+			<div class="container">
+        <div class="row d-flex flex-column">
+          <h3 class="h3-responsive">
+            Cloak of Displacement
+          </h3>
+          <div class="item">
+            <div class="section">
+              <span class="title">Materials</span>
+              <span><b>Displacer Beast Hide</b> - Good</span>
+              <span>Gems - Good</span>
+            </div>
+            <div class="section">
+              <span class="title">Refinement</span>
+              <span>Checks</span>
+              <span>DC:</span>
+            </div>
+            <div class="section">
+              <span class="title">Enchanting</span>
+              <span>Checks</span>
+              <span>DC: </span>
+            </div>
+          </div>
+        </div>
+      </div>
+		</main>
 		<?php include('include/footer.php') ?>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
